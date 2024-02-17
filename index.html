@@ -12,7 +12,83 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
+  <body class="font-sans px-4 md:px-12 lg:px-24 text-pretty">
+    <!-- Header Section  -->
+    <header>
+      <!-- Nav Section  -->
+      <nav class="bg-white border-gray-200">
+        <div
+          class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+        >
+          <a
+            href="https://trans-ticket.netlify.app/"
+            class="flex items-center space-x-3 rtl:space-x-reverse"
+          >
+            <span
+              class="self-center text-2xl lg:text-4xl font-extrabold whitespace-nowrap"
+              >Trans-Ticket</span
+            >
+          </a>
+          <div
+            class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse"
+          >
+            <button
+              type="button"
+              class="text-[#1DD100] bg-[#1DD1001A] border border-[#1DD10066] focus:outline-none font-bold rounded-xl text-sm px-4 py-2 text-center flex gap-2"
+            >
+              Bus <img src="./images/bus-icon.png" alt="bus-icon" />
+            </button>
+            <button
+              data-collapse-toggle="navbar-cta"
+              type="button"
+              class="inline-flex items-center p-2 w-10 h-10 justify-center rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200"
+              aria-controls="navbar-cta"
+              aria-expanded="false"
+            >
+              <img src="./images/burger-menu.png" alt="burger-menu" />
+            </button>
+          </div>
+          <div
+            class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+            id="navbar-cta"
+          >
+            <ul
+              class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-[#1DD10066] rounded-xl bg-[#1DD1001A] md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 md:p-0 text-[#1DD100] md:text-[#030712B2] bg-white rounded md:bg-transparent"
+                  aria-current="page"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 md:p-0 text-[#1DD100] md:text-[#030712B2] rounded md:bg-transparent"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 md:p-0 text-[#1DD100] md:text-[#030712B2] rounded md:bg-transparent"
+                  >Destination</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 md:p-0 text-[#1DD100] md:text-[#030712B2] rounded md:bg-transparent"
+                  >Search</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
     <!-- JS  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <script src="./js/utility.js"></script>
