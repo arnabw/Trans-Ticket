@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth focus:scroll-auto">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -264,23 +264,31 @@
           enhancing your transportation experience.
         </p>
         <div
-          class="flex flex-col-reverse md:flex-row justify-between bg-white px-8 items-center rounded-3xl"
+          class="flex flex-col-reverse lg:grid lg:grid-cols-12 items-center gap-4 lg:gap-8 bg-white py-8 lg:py-0 px-8 rounded-3xl mt-10"
         >
-          <div>
-            <div>
-              <ul class="grid grid-cols-3">
-                <li class="row-span-2">
+          <div class="space-y-6 lg:col-span-9">
+            <div
+              class="flex flex-col-reverse md:flex-row justify-between items-center gap-4"
+            >
+              <ul
+                class="grid grid-cols-3 items-center text-center md:text-left"
+              >
+                <li class="hidden md:grid md:row-span-2">
                   <img src="./images/bus-logo.png" alt="bus-logo" />
                 </li>
-                <li class="text-[32px] font-bold text-[#030712] col-span-2">
+                <li
+                  class="text-lg md:text-xl lg:text-[32px] font-bold text-[#030712] col-span-3 md:col-span-2"
+                >
                   Trans Vehicle
                 </li>
-                <li class="text-lg text-[#03071299] col-span-2">
+                <li
+                  class="text-xs md:text-base lg:text-lg text-[#03071299] col-span-3 md:col-span-2"
+                >
                   Coach-1703-WEB9 ! AC_Business
                 </li>
               </ul>
               <h4
-                class="text-lg text-[#1DD100] flex gap-1 bg-[#1DD10026] rounded-xl p-4 justify-center items-center"
+                class="text-base lg:text-lg text-[#1DD100] flex gap-1 bg-[#1DD10026] rounded-xl p-2 lg:p-4 justify-center items-center"
               >
                 <img src="./images/seat-green.png" alt="seat-green" /><span
                   id="seatsLeft"
@@ -289,17 +297,47 @@
                 Seats left
               </h4>
             </div>
-            <div></div>
+            <div class="bg-[#F7F8F8] rounded-3xl p-8">
+              <ul
+                class="text-lg font-semibold border-b-2 border-dashed border-[#03071233] pb-3 md:pb-6 flex flex-col md:flex-row items-center justify-between"
+              >
+                <li class="text-[#03071299]">Route</li>
+                <li class="text-[#030712]">Dhaka - Sylhet</li>
+              </ul>
+              <ul
+                class="text-lg font-semibold border-b-2 border-dashed border-[#03071233] flex flex-col md:flex-row items-center justify-between py-3 md:py-6"
+              >
+                <li class="text-[#03071299]">Departure Time</li>
+                <li class="text-[#030712]">9:00 PM</li>
+              </ul>
+              <ul
+                class="text-[#030712CC] text-sm lg:text-base font-medium flex flex-col md:flex-row justify-between pt-3 md:pt-6 gap-3 text-center"
+              >
+                <li class="bg-[#0307120D] rounded-xl p-2 lg:p-4">
+                  Boarding Point - Laxmipur
+                </li>
+                <li class="bg-[#0307120D] rounded-xl p-2 lg:p-4">
+                  Dropping Point - Bogura
+                </li>
+                <li class="bg-[#0307120D] rounded-xl p-2 lg:p-4">
+                  Est. Time - 11 Hour
+                </li>
+              </ul>
+            </div>
           </div>
           <img
-            class="rotate-90 md:rotate-0"
+            class="hidden lg:grid lg:col-span-1"
             src="./images/info-devider.png"
             alt="info-divider"
           />
-          <ul class="flex flex-col justify-center items-center">
+          <ul class="flex flex-col justify-center items-center lg:col-span-2">
             <li><img src="./images/fare.png" alt="fare" /></li>
-            <li class="text-[#030712] text-[32px] font-bold">550 Taka</li>
-            <li class="text-[#03071299] text-2xl font-semibold">Per Seat</li>
+            <li class="text-[#030712] text-xl lg:text-[32px] font-bold">
+              550 Taka
+            </li>
+            <li class="text-[#03071299] text-lg lg:text-2xl font-semibold">
+              Per Seat
+            </li>
           </ul>
         </div>
       </section>
