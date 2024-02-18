@@ -370,14 +370,13 @@
               </li>
             </ul>
             <!-- Seat Selection Section  -->
-
-            <div class="relative shadow-md sm:rounded-lg mt-6">
+            <div class="relative shadow-md rounded-lg mt-6">
               <table class="w-full text-sm text-left rtl:text-right">
                 <tbody>
                   <tr class="border-b grid grid-cols-1 sm:rounded-t-lg">
                     <th
                       scope="row"
-                      class="px-6 py-4 bg-[#0307121A] rounded-xl w-[110px] place-self-end mb-3"
+                      class="px-6 py-4 bg-[#0307121A] rounded-xl w-[110px] place-self-end mb-3 mr-3"
                     >
                       <img
                         class="mx-auto"
@@ -859,19 +858,205 @@
                 </tbody>
               </table>
             </div>
-
-            <!-- ///// -->
           </div>
-          <div>
+          <div class="lg:w-96">
             <h2
               class="text-2xl font-semibold text-[#030712] border-b-2 border-dashed border-[#03071233] pb-6"
             >
               Confirm Your Seat
             </h2>
+            <!-- Confirm Selection Section  -->
+            <div>
+              <div class="p-8 bg-[#F7F8F8] mt-6 rounded-xl">
+                <ul
+                  class="text-[#030712] text-base font-medium flex justify-between items-center border-b-2 border-dashed border-[#03071233] pb-4"
+                >
+                  <li>
+                    Seat
+                    <span
+                      id="seatCount"
+                      class="text-xs font-bold text-white bg-[#1DD100] rounded-2xl px-2"
+                      >0</span
+                    >
+                  </li>
+                  <li>Class</li>
+                  <li>Price</li>
+                </ul>
+                <ul
+                  id="selectedSeat"
+                  class="text-[#03071299] text-base grid grid-cols-3 border-b-2 border-[#03071233] pb-4"
+                ></ul>
+                <ul
+                  id="theprice"
+                  class="text-[#030712] text-base font-medium grid grid-cols-2 py-4"
+                >
+                  <li>Total Price</li>
+                  <li class="place-self-end">
+                    BDT <span id="totalPrice">0</span>
+                  </li>
+                </ul>
+
+                <form>
+                  <div class="relative">
+                    <input
+                      type="text"
+                      id="couponInput"
+                      class="block w-full p-2 md:p-4 ps-5 md:ps-10 text-sm md:text-lg text-amber-500 border border-gray-300 rounded-xl bg-gray-50 focus:ring-pink-400 focus:border-pink-400"
+                      placeholder="Have any coupon?"
+                    />
+                    <button
+                      type="submit"
+                      id="couponSubmit"
+                      class="text-white absolute end-2 md:end-2.5 bottom-1.5 md:bottom-2.5 bg-[#1DD100] hover:shadow-lg focus:outline-none font-semibold rounded-lg text-xs md:text-base px-2 md:px-4 py-1 md:py-2 cursor-not-allowed"
+                      disabled
+                    >
+                      Apply
+                    </button>
+                  </div>
+                </form>
+                <ul
+                  class="text-[#030712] text-base font-medium grid grid-cols-2 pt-4"
+                >
+                  <li>Grand Total</li>
+                  <li class="place-self-end">
+                    BDT <span id="grandTotal">0</span>
+                  </li>
+                </ul>
+              </div>
+              <!-- Passenger Details Input Section  -->
+              <div class="mt-4 md:mt-6">
+                <form>
+                  <label
+                    class="block mb-2 text-base font-semibold text-[#030712]"
+                    >Passenger Name</label
+                  >
+                  <input
+                    type="text"
+                    class="block w-full p-2 md:p-4 ps-5 md:ps-10 mb-4 md:mb-6 text-sm md:text-lg text-[#1DD100] border border-gray-300 rounded-xl bg-gray-50 focus:ring-green-500 focus:border-green-500"
+                    placeholder="Enter your name"
+                  />
+                  <label
+                    class="block mb-2 text-base font-semibold text-[#030712]"
+                    >Phone Number*</label
+                  >
+                  <input
+                    type="number"
+                    id="passengerNumb"
+                    class="block w-full p-2 md:p-4 ps-5 md:ps-10 mb-4 md:mb-6 text-sm md:text-lg text-[#1DD100] border border-gray-300 rounded-xl bg-gray-50 focus:ring-green-500 focus:border-green-500"
+                    placeholder="Enter your phone number"
+                    required
+                  />
+                  <label
+                    class="block mb-2 text-base font-semibold text-[#030712]"
+                    >Email ID</label
+                  >
+                  <input
+                    type="email"
+                    class="block w-full p-2 md:p-4 ps-5 md:ps-10 mb-4 md:mb-6 text-sm md:text-lg text-[#1DD100] border border-gray-300 rounded-xl bg-gray-50 focus:ring-green-500 focus:border-green-500"
+                    placeholder="Enter your email id"
+                  />
+                  <button
+                    type="submit"
+                    id="nextBtn"
+                    data-modal-target="static-modal"
+                    data-modal-toggle="static-modal"
+                    class="text-white w-full bg-[#1DD100] hover:shadow-lg focus:outline-none font-semibold rounded-lg text-xs md:text-base p-2 md:p-4 cursor-not-allowed"
+                    type="button"
+                  >
+                    Next
+                  </button>
+                  <!-- Modal -->
+                  <div
+                    id="static-modal"
+                    data-modal-backdrop="static"
+                    tabindex="-1"
+                    aria-hidden="true"
+                    class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+                  >
+                    <div class="relative p-4 w-full max-w-2xl max-h-full">
+                      <!-- Modal content -->
+                      <div class="relative bg-white rounded-2xl shadow">
+                        <!-- Modal header -->
+                        <div
+                          class="flex flex-col items-center justify-center gap-5 p-4 md:p-5"
+                        >
+                          <img src="./images/success.png" alt="done" />
+                          <h3 class="text-2xl font-bold text-[#27AE60]">
+                            SUCCESS
+                          </h3>
+                        </div>
+                        <!-- Modal body -->
+                        <div
+                          class="p-4 md:p-5 space-y-4 text-xl text-center text-[#4A4A4A] leading-relaxed"
+                        >
+                          <p class="font-medium">
+                            Thank you for Booking Our Bus Seats. We are working
+                            hard to find the best service and deals for you.
+                          </p>
+                          <p class="font-light">
+                            Shortly you will find a confirmation in your email.
+                          </p>
+                        </div>
+                        <!-- Modal footer -->
+                        <div
+                          class="flex justify-center items-center p-4 md:p-5"
+                        >
+                          <button
+                            onclick="window.location.href='https://trans-ticket.netlify.app/#transVehicle';"
+                            type="button"
+                            class="text-white bg-[#27AE60] focus:outline-none font-semibold rounded-[32px] text-xl text-center h-12 w-64"
+                          >
+                            Continue
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <ul
+                  class="text-base underline text-[#03071299] flex justify-between items-center mt-4 md:mt-6 px-4 md:px-8"
+                >
+                  <li>Terms and Conditions</li>
+                  <li>Cancellation Policy</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
+    <!-- Footer Section  -->
+    <footer class="px-4 md:px-12 lg:px-24 py-10 md:py-20 bg-[#030712]">
+      <ul
+        class="grid grid-cols-1 *:mx-auto *:md:mx-0 text-center md:text-left md:grid-cols-2 space-y-4 border-b-2 border-dashed border-white pb-6 md:pb-10"
+      >
+        <li class="text-white text-4xl font-extrabold">Trans-Ticket</li>
+        <li class="md:place-self-end text-[20px] font-semibold text-white">
+          Download our app
+        </li>
+        <li class="text-[#FFFFFFCC] text-lg max-w-[374px]">
+          Trans-Ticket is a digital platform to make your daily commuting
+          better.
+        </li>
+        <li class="md:place-self-end">
+          <img src="./images/playstore.png" alt="play_store" />
+        </li>
+      </ul>
+      <ul
+        class="flex flex-col lg:flex-row justify-between items-center space-y-5 mt-8 text-center"
+      >
+        <li class="text-base text-[#FFFFFFB2]">
+          @designed by Arnab Saha, Trans-Ticket services limited.2024
+        </li>
+        <li
+          class="font-medium text-white flex justify-center items-center gap-5"
+        >
+          <p>Terms & condition</p>
+          <p>Return & refund policy</p>
+          <p>Privacy policy</p>
+        </li>
+      </ul>
+    </footer>
     <!-- JS  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <script src="./js/utility.js"></script>
