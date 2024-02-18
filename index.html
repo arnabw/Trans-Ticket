@@ -263,6 +263,7 @@
           convenient travel with efficient routes and comfortable rides,
           enhancing your transportation experience.
         </p>
+        <!-- Time Schedule Section  -->
         <div
           class="flex flex-col-reverse lg:grid lg:grid-cols-12 items-center gap-4 lg:gap-8 bg-white py-8 lg:py-0 px-8 rounded-3xl mt-10"
         >
@@ -339,6 +340,535 @@
               Per Seat
             </li>
           </ul>
+        </div>
+        <!-- Seat Select and Confirm Section  -->
+        <div
+          class="flex flex-col lg:flex-row gap-6 p-8 justify-between bg-white mt-7 rounded-3xl"
+        >
+          <div
+            class="border-b-2 lg:border-b-0 pb-6 lg:pb-0 lg:pr-8 lg:border-r-2 border-dashed border-[#03071233] flex-1"
+          >
+            <h2
+              class="text-2xl font-semibold text-[#030712] border-b-2 border-dashed border-[#03071233] pb-6"
+            >
+              Select Your Seat
+            </h2>
+            <ul
+              class="font-medium text-lg text-[#03071280] flex justify-between border-b-2 border-dashed border-[#03071233] py-5"
+            >
+              <li class="flex gap-2">
+                <img src="./images/seat-gray.png" alt="seat-gray" />Available
+              </li>
+              <li id="unselected" class="flex gap-2">
+                <img src="./images/seat-gray.png" alt="seat-gray" />Selected
+              </li>
+              <li id="selected" class="hidden gap-2 text-[#1DD100]">
+                <img
+                  src="./images/seat-green-filled.png"
+                  alt="seat-gray"
+                />Selected
+              </li>
+            </ul>
+            <!-- Seat Selection Section  -->
+
+            <div class="relative shadow-md sm:rounded-lg mt-6">
+              <table class="w-full text-sm text-left rtl:text-right">
+                <tbody>
+                  <tr class="border-b grid grid-cols-1 sm:rounded-t-lg">
+                    <th
+                      scope="row"
+                      class="px-6 py-4 bg-[#0307121A] rounded-xl w-[110px] place-self-end mb-3"
+                    >
+                      <img
+                        class="mx-auto"
+                        src="./images/tabler-icon-steering-wheel.png"
+                        alt="wheel"
+                      />
+                    </th>
+                  </tr>
+                  <!-- A  -->
+                  <tr
+                    class="border-b grid grid-cols-2 md:grid-cols-9 items-center text-center"
+                  >
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium text-[#03071280] text-lg col-span-2 md:col-span-1"
+                    >
+                      A
+                    </th>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        A1
+                      </button>
+                    </td>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        A2
+                      </button>
+                    </td>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        A3
+                      </button>
+                    </td>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        A4
+                      </button>
+                    </td>
+                  </tr>
+                  <!-- B  -->
+                  <tr
+                    class="border-b grid grid-cols-2 md:grid-cols-9 items-center text-center"
+                  >
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium text-[#03071280] text-lg col-span-2 md:col-span-1"
+                    >
+                      B
+                    </th>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        B1
+                      </button>
+                    </td>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        B2
+                      </button>
+                    </td>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        B3
+                      </button>
+                    </td>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        B4
+                      </button>
+                    </td>
+                  </tr>
+                  <!-- C  -->
+                  <tr
+                    class="border-b grid grid-cols-2 md:grid-cols-9 items-center text-center"
+                  >
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium text-[#03071280] text-lg col-span-2 md:col-span-1"
+                    >
+                      C
+                    </th>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        C1
+                      </button>
+                    </td>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        C2
+                      </button>
+                    </td>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        C3
+                      </button>
+                    </td>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        C4
+                      </button>
+                    </td>
+                  </tr>
+                  <!-- D  -->
+                  <tr
+                    class="border-b grid grid-cols-2 md:grid-cols-9 items-center text-center"
+                  >
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium text-[#03071280] text-lg col-span-2 md:col-span-1"
+                    >
+                      D
+                    </th>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        D1
+                      </button>
+                    </td>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        D2
+                      </button>
+                    </td>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        D3
+                      </button>
+                    </td>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        D4
+                      </button>
+                    </td>
+                  </tr>
+                  <!-- E  -->
+                  <tr
+                    class="border-b grid grid-cols-2 md:grid-cols-9 items-center text-center"
+                  >
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium text-[#03071280] text-lg col-span-2 md:col-span-1"
+                    >
+                      E
+                    </th>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        E1
+                      </button>
+                    </td>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        E2
+                      </button>
+                    </td>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        E3
+                      </button>
+                    </td>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        E4
+                      </button>
+                    </td>
+                  </tr>
+                  <!-- F  -->
+                  <tr
+                    class="border-b grid grid-cols-2 md:grid-cols-9 items-center text-center"
+                  >
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium text-[#03071280] text-lg col-span-2 md:col-span-1"
+                    >
+                      F
+                    </th>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        F1
+                      </button>
+                    </td>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        F2
+                      </button>
+                    </td>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        F3
+                      </button>
+                    </td>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        F4
+                      </button>
+                    </td>
+                  </tr>
+                  <!-- G  -->
+                  <tr
+                    class="border-b grid grid-cols-2 md:grid-cols-9 items-center text-center"
+                  >
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium text-[#03071280] text-lg col-span-2 md:col-span-1"
+                    >
+                      G
+                    </th>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        G1
+                      </button>
+                    </td>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        G2
+                      </button>
+                    </td>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        G3
+                      </button>
+                    </td>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        G4
+                      </button>
+                    </td>
+                  </tr>
+                  <!-- H  -->
+                  <tr
+                    class="border-b grid grid-cols-2 md:grid-cols-9 items-center text-center"
+                  >
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium text-[#03071280] text-lg col-span-2 md:col-span-1"
+                    >
+                      H
+                    </th>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        H1
+                      </button>
+                    </td>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        H2
+                      </button>
+                    </td>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        H3
+                      </button>
+                    </td>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        H4
+                      </button>
+                    </td>
+                  </tr>
+                  <!-- I  -->
+                  <tr
+                    class="border-b grid grid-cols-2 md:grid-cols-9 items-center text-center"
+                  >
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium text-[#03071280] text-lg col-span-2 md:col-span-1"
+                    >
+                      I
+                    </th>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        I1
+                      </button>
+                    </td>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        I2
+                      </button>
+                    </td>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        I3
+                      </button>
+                    </td>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        I4
+                      </button>
+                    </td>
+                  </tr>
+                  <!-- J  -->
+                  <tr
+                    class="border-b grid grid-cols-2 md:grid-cols-9 items-center text-center"
+                  >
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium text-[#03071280] text-lg col-span-2 md:col-span-1"
+                    >
+                      J
+                    </th>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        J1
+                      </button>
+                    </td>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        J2
+                      </button>
+                    </td>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        J3
+                      </button>
+                    </td>
+                    <td class="px-3 py-4 col-span-1 md:col-span-2">
+                      <button
+                        id="bookingBtn"
+                        type="button"
+                        class="text-[#03071280] bg-[#F7F8F8] hover:shadow-lg font-medium rounded-xl text-lg px-10 py-4 focus:outline-none"
+                      >
+                        J4
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- ///// -->
+          </div>
+          <div>
+            <h2
+              class="text-2xl font-semibold text-[#030712] border-b-2 border-dashed border-[#03071233] pb-6"
+            >
+              Confirm Your Seat
+            </h2>
+          </div>
         </div>
       </section>
     </main>
