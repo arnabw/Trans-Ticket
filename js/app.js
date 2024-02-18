@@ -52,11 +52,13 @@ getId("couponSubmit").addEventListener("click", (e) => {
     createdLI("theprice", "Discount Price", "okay");
     createdLI("theprice", discountedPrice, "end");
     alterInnerText("grandTotal", totalPrice - discountedPrice);
+    getId("removable").remove();
   } else if (checkInput("couponInput", "Couple 20")) {
     const discountedPrice = totalPrice * 0.2;
     createdLI("theprice", "Discount Price", "okay");
     createdLI("theprice", discountedPrice, "end");
     alterInnerText("grandTotal", totalPrice - discountedPrice);
+    getId("removable").remove();
   } else {
     alert(
       "To get a discount, please use the following two coupons: 'NEW15' and 'Couple 20'. Note that these are the only coupons that can be used for the discount."
