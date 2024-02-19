@@ -14,8 +14,12 @@ seats.forEach((seat) => {
       e.target.style.background = "#1DD100";
       e.target.style.color = "#FFFFFF";
 
+      //Selected color change, seat can select one time, Next button check
       getId("unselected").classList.replace("flex", "hidden");
       getId("selected").classList.replace("hidden", "flex");
+      seat.setAttribute("disabled", true);
+      if (getId("passengerNumb").value !== "") removeDisabled("nextBtn");
+      else addDisabled("nextBtn");
 
       // Appending
       createdLI("selectedSeat", e.target.innerText, "okay");
@@ -38,6 +42,7 @@ seats.forEach((seat) => {
   });
 });
 
+// Next button check
 getId("passengerNumb").addEventListener("keyup", (e) => {
   if (e.target.value !== "" && seatCount > 0) {
     removeDisabled("nextBtn");
@@ -46,6 +51,7 @@ getId("passengerNumb").addEventListener("keyup", (e) => {
   }
 });
 
+//Coupon calculation
 getId("couponSubmit").addEventListener("click", (e) => {
   if (checkInput("couponInput", "NEW15")) {
     const discountedPrice = totalPrice * 0.15;
